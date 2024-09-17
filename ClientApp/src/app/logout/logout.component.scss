@@ -1,0 +1,114 @@
+.logout-box {
+    border: 1px solid var(--primary-border-color);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+
+    .login-info {
+        display: flex;
+        align-items: center;
+        margin: 0px 12px;
+        border-bottom: 1px solid var(--primary-border-color);
+    }
+
+    .user-image {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        // margin-right: 10px;
+        padding: 5px;
+        background-color: var(--bg-color-4);
+    }
+
+    .login-details {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 10px;
+
+        .login-name {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            max-width: 175px;
+            color: var(--primary-black);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .login-email {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            max-width: 175px;
+            color: var(--secondary-text-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .separator {
+        border-bottom: 1px solid var(--border-color);
+        height: 5px;
+    }
+
+    .clinic-code {
+        margin-top: 2px;
+    }
+
+    .logout-btn {
+        width: calc(100% - 20px);
+        justify-content: flex-start;
+        background-color: transparent;
+        padding: 10px;
+        margin: 5px 10px;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        .text {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 20px;
+            color: var(--primary-black);
+        }
+
+        .icon {
+            margin-right: 9px;
+
+            svg {
+                display: block;
+
+                * {
+                    transition: all 0.4s;
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
+.toggle-theme-btn {
+    width: 25px;
+    height: 25px;
+    display: inline;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--primary-border-color);
+    margin-right: 7px;
+    margin-left: -4px;
+    vertical-align: middle;
+
+    .fa-sun {
+        font-size: 12px;
+        color: var(--primary-color);
+    }
+
+    .fa-moon {
+        font-size: 13px;
+        color: var(--primary-color);
+    }
+}

@@ -1,0 +1,187 @@
+.mat-mdc-menu-panel {
+    &.mat-mdc-menu-panel.mat-mdc-menu-panel {
+        min-width: 160px;
+        max-width: 100%;
+        min-height: auto;
+        background-color: var(--main-bg);
+        border-radius: 6px;
+        box-shadow: 0px 7px 24px rgb(0 0 0 / 14%);
+        margin: 10px 0;
+
+        .mat-mdc-menu-content:not(:empty) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mat-mdc-menu-item {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            min-height: auto;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--color-3);
+            padding: 8px 16px 8px 16px;
+            transition: background-color .4s;
+
+            .mat-icon {
+                font-size: 20px;
+                margin-right: 3px;
+                color: $icon-color;
+            }
+
+            svg {
+                margin-right: 5px;
+                margin-left: 3px;
+            }
+
+            .mat-mdc-menu-item-text {
+                font-size: 14px !important;
+                margin-bottom: 3px;
+            }
+
+            .mdc-list-item__primary-text {
+                font-size: 14px;
+                line-height: 18px;
+                color: var(--primary-black);
+            }
+
+            .btn-icon {
+                font-size: 20px;
+                color: var(--primary-color);
+                margin-right: 8px;
+                transition: 0.3s;
+            }
+
+            .btn-text {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                color: var(--color-3);
+                transition: 0.3s;
+            }
+
+            .search-item-text {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18px;
+                color: var(--primary-color);
+                margin-left: 6px;
+            }
+
+            &:hover:not([disabled]),
+            &.cdk-program-focused:not([disabled]),
+            &.cdk-keyboard-focused:not([disabled]),
+            &-highlighted:not([disabled]) {
+                background-color: var(--main-hover-bg);
+            }
+        }
+
+        &.mat-menu-lists {
+            border-radius: 0 0 8px 8px;
+            margin: 0;
+
+            .mat-mdc-menu-item {
+                padding: 12px 16px;
+
+                +.mat-mdc-menu-item {
+                    border-top: 1px solid rgba(#d7dfe9, 0.5);
+                }
+            }
+        }
+
+        .mat-mdc-button.mat-mdc-button-base {
+            width: 100%;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+
+        &.mat-menu-icons {
+            .mat-mdc-menu-item {
+                padding: 10px 16px;
+            }
+
+            .mdc-list-item__primary-text {
+                display: inline-flex;
+                align-items: flex-end;
+            }
+        }
+    }
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.dp-box-icon.color-1 {
+    background-color: var(--list-bg-color-1);
+
+    .dp-text {
+        color: #E24152;
+    }
+}
+
+.dp-box-icon.color-2 {
+    background-color: var(--list-bg-color-2);
+
+    .dp-text {
+        color: #ef6327;
+    }
+}
+
+.dp-box-icon.color-3 {
+    background-color: var(--list-bg-color-3);
+
+    .dp-text {
+        color: #7a1561;
+    }
+}
+
+.dp-box-icon.color-4 {
+    background-color: var(--list-bg-color-4);
+
+    .dp-text {
+        color: #01a171;
+    }
+}
+
+.dp-box-icon.color-5 {
+    background-color: var(--list-bg-color-5);
+
+    .dp-text {
+        color: #0172c0;
+    }
+}
+
+
+.dp-box-icon.color-6 {
+    background-color: var(--list-bg-color-6);
+
+    .dp-text {
+        color: #bba705;
+    }
+}
+
+.dp-box-icon.color-7 {
+    background-color: var(--list-bg-color-7);
+
+    .dp-text {
+        color: #1f0abd;
+    }
+}
+
+.dp-box-icon.color-8 {
+    background-color: var(--list-bg-color-8);
+
+    .dp-text {
+        color: #a00091;
+    }
+}
+
+.dp-box-icon.color-9 {
+    background-color: var(--list-bg-color-9);
+
+    .dp-text {
+        color: #00a1c8;
+    }
+}

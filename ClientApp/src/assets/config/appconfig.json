@@ -1,0 +1,24 @@
+{
+    "environment": {
+        "name": "Local",
+        "production": false
+    },
+    "appInsights": {
+        "instrumentationKey": ""
+    },
+    "logging": {
+        "console": true,
+        "appInsights": false
+    },
+    "api": {
+        "url": "https://sept2417-01.azurewebsites.net"
+    },
+    "app": {
+        "title": "Sept2417"
+    },
+    "buildInfo": {
+        "number": "1.0.0.0",
+        "createdOn": "Tuesday, September 17, 2024 1:27:21 PM"
+    },
+    "environments": []
+}

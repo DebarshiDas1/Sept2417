@@ -1,0 +1,40 @@
+<div class="row">
+    <ng-container *ngFor="let section of mappedData">
+        <ng-container [ngSwitch]="section.dataType">
+
+            <!-- Section -->
+            <div *ngSwitchCase="'section'" [ngClass]="getColumnClass(section.column)">
+                <div class="cards">
+                    <div class="align-items-center card-title">
+                        <p class="section-header tuncate-text" #sectionHeader matTooltip={{section.label}}
+                            [matTooltipDisabled]="isTooltipDisabled(sectionHeader)">
+                            <i *ngIf="section.icon"
+                                class="fas {{section.icon}} list-label-icon mr10"></i>{{section.label}}
+                        </p>
+                    </div>
+
+                    <!-- Recursively render nested sections -->
+                    <div class="cards-content">
+                        <app-preview-layout [mappedData]="section.fields"></app-preview-layout>
+                    </div>
+                </div>
+            </div>
+
+            <ng-container *ngSwitchDefault>
+                <div [ngClass]="getColumnClass(section.column)">
+                    <div class="preview-data">
+                        <p class="font-body-medium list-info-label tuncate-text" *ngIf="!section.icon" #previewLabel
+                            matTooltip={{section.label}} [matTooltipDisabled]="isTooltipDisabled(previewLabel)">
+                            {{section.label}}
+                        </p>
+                        <p class="font-title-xs list-info-text fw-normal tuncate-text" #previewValue
+                            matTooltip={{section.value}} [matTooltipDisabled]="isTooltipDisabled(previewValue)">
+                            <i *ngIf="section.icon"
+                                class="fas {{section.icon}} list-label-icon mr10"></i>{{section.value}}
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</div>

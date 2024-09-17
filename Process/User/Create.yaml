@@ -1,0 +1,75 @@
+cells:
+  - type: app.TriggerShape
+    title: "Trigger"
+    size:
+      width: 280
+      height: 35
+    position:
+      x: 50
+      y: 25
+    angle: 0
+    id: 279a764b-d624-4699-816f-b28fae07698c
+    z: 1
+    attrs:
+      headerLabel:
+        text: Start
+  - type: app.OperationShape
+    title: Create
+    size:
+      width: 280
+      height: 35
+    position:
+      x: 50
+      y: 210
+    angle: 0
+    id: 86219b1a-10de-46de-b910-8b00d73db871
+    z: 2
+    attrs:
+      headerLabel:
+        text: Create user
+  - type: standard.Circle
+    title: "Circle"
+    position:
+      x: 181
+      y: 395
+    size:
+      width: 15
+      height: 15
+    angle: 0
+    id: 8513df80-2d5c-4931-aa1c-783def30be73
+    z: 3
+    attrs:
+      root:
+        tabindex: 12
+      body:
+        strokeWidth: 0.5
+        stroke: "#ccc"
+        fill: "#faf9f7"
+        filter:
+          name: highlight
+          args:
+            color: "#000"
+            width: 0.5
+            opacity: 2
+            blur: 5
+        fillOpacity: 0.5
+  - type: standard.Link
+    source:
+      id: 279a764b-d624-4699-816f-b28fae07698c
+    target:
+      id: 86219b1a-10de-46de-b910-8b00d73db871
+    id: 724010fb-24c6-428b-b6ca-de9ece7c1cdf
+    z: 3
+    attrs:
+      line:
+        stroke: "#A0A0A0"
+  - type: standard.Link
+    source:
+      id: 86219b1a-10de-46de-b910-8b00d73db871
+    target:
+      id: 8513df80-2d5c-4931-aa1c-783def30be73
+    id: 9d19887f-f70f-4069-9f16-57c351fca05f
+    z: 5
+    attrs:
+      line:
+        stroke: "#A0A0A0"

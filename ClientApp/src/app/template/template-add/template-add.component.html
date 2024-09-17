@@ -1,0 +1,18 @@
+<div class="add-edit-content-wrapper">
+    <div class="dialog-header d-flex align-items-center justify-content-between">
+        <h2 class="dialog-header-text">{{id ? 'Edit' : 'Add new'}} {{this.entityDisplayName}}</h2>
+        <button mat-icon-button (click)="closeDialog()">
+            <span class="material-icons">close</span>
+        </button>
+    </div>
+    <mat-dialog-content class="dialog-content-wrapper ec-custom-scroll">
+        <form *ngIf="form && layoutData" [formGroup]="form" autocomplete="off">
+            <app-dynamic-layout [form]="form" [formFields]="layoutData"
+                [fieldOptions]="fieldOptions"></app-dynamic-layout>
+        </form>
+    </mat-dialog-content>
+    <div class="form-action-box d-flex mt-4">
+        <button mat-button class="ec-primary-btn" (click)="onSubmit()">Save</button>
+        <button mat-button class="ec-cancel-btn" (click)="closeDialog()">Cancel</button>
+    </div>
+</div>

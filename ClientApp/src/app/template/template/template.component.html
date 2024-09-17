@@ -1,0 +1,13 @@
+<section class="main-section-column-wrapper patient-sec">
+    <div class="main-section-left patient-list-box">
+        <app-template-list [entityName]="entityName" [filterFields]="filterFields" [fieldOptions]="fieldOptions"
+            [form]="form" [mappedData]="mappedListData" [isLoadMore]="isLoadMore" [isLoading]="isLoading"
+            [selectedIndex]="selectedIndex" (previewRecord)="previewRecord($event)"
+            (refresh)="onLoadNext($event)"></app-template-list>
+    </div>
+    <div class="main-section-right patient-detail-box">
+        <!-- <app-top-bar></app-top-bar> -->
+        <app-template-preview [entityName]="entityName" [mappedData]="mappedPreviewData" [id]="selectedId"
+            (refresh)="onRefresh()"></app-template-preview>
+    </div>
+</section>

@@ -1,0 +1,95 @@
+.light-theme {
+  /* Background colors */
+  --main-bg: #fcfcfc;
+  --bg-secondary: #FFF;
+  --bg-color-3: #ffe2e5;
+  --bg-color-4: #f3f5f9;
+  --bg-color-5: #fafafa;
+  --bg-color-6: #f8f8f8;
+  --bg-color-7: #e9e9e9;
+  --bg-color-8: #fcfcfc;
+  --scrollbar-thumb-bg: #ededed;
+  --toolbar-bg: #f3f5f9;
+  --toolbar-btn-hover-bg: #eaf0f9;
+  --main-hover-bg: rgba(0, 0, 0, 0.05);
+  --item-hover-bg: #51a7ff91;
+  --sidebar-bg: #0172c0;
+  --sidebar-hover-bg: rgba(255, 255, 255, 0.15);
+  --sidebar-submenu-hover-bg: rgba(249, 251, 250, 0.2);
+  --list-page-bg: #FFF;
+  --default-card-bg: #FFF;
+  --secondary-card-bg: #FFF;
+  --popup-bg: #FFF;
+  --secondary-popup-bg: #fcfcfc;
+  --default-popover-bg: #FFF;
+
+  --list-bg-color-1: #e2415226;
+  --list-bg-color-2: #ef632726;
+  --list-bg-color-3: #66325926;
+  --list-bg-color-4: #0bb78326;
+  --list-bg-color-5: #0172c026;
+  --list-bg-color-6: #f4d80030;
+  --list-bg-color-7: #250be324;
+  --list-bg-color-8: #e30bcf21;
+  --list-bg-color-9: #0ac2ee36;
+
+  /* Main colors */
+  --white: #fff;
+  --black: #000;
+  --primary-color: #3699ff;
+  --primary-hover-color: #095cb2;
+  --primary-link-color: #0b75e2;
+  --primary-color-darker: #0172C0;
+  --primary-color-light: #328CA8;
+  --primary-color-lighter: #93C5E8;
+
+  /* Text colors */
+  --primary-black: #212121;
+  --primary-gray: #b5b5c3;
+  --primary-error: #ff4743;
+  --primary-text-color: #717171;
+  --secondary-text-color: #7e8599;
+
+  --primary-header-color: #252f4a;
+  --primary-label-color: #78829d;
+  --sidebar-text-color: #FFF;
+  --sidebar-active-text-color: #FFF;
+
+  --extra-color-1: #ffa800;
+
+  --color-3: #303030;
+  --color-4: #485675;
+  --color-5: #80879a;
+  --color-6: #9EA3B3;
+  --color-7: #e0e0e8;
+
+  --icon-color: #8e8e8e;
+
+  /* Border colors */
+  --border-color: #ededed;
+  --border-color-light: #f1f2f3;
+  --border-color-dark: #e5eaee;
+  --border-color-darker: #e4e4e4;
+  --border-color-secondary: #d2d2d2;
+  --border-color-3: #c4c4c4;
+
+  --primary-border-color: #ededed;
+  --secondary-border-color: #ededed;
+  --separator-color: #d7dfe9;
+  --input-box-shadow: rgba(0, 0, 0, 0.14);
+  --sidebar-border-color: transparent;
+  --sidebar-submenu-border-color: #2787C9;
+
+  /* Other colors */
+  --highlight-color: #E24152;
+  --color-positive: #0bb783;
+  --color-warning: #DF7615;
+  --dark-green: #01a171;
+
+  --cz-body-bg: #fbfafa;
+  --cz-login-bg: #fd912f;
+  --box-shadow-1: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 2px 6px;
+  --box-shadow-2: 0px 7px 24px rgba(0, 0, 0, 0.16);
+  --box-shadow-3: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+  --selected-box-shadow: rgba(138, 197, 255, 0.25) 0px 6px 12px -2px, rgba(138, 197, 255, 0.3) 0px 3px 7px -3px;
+}

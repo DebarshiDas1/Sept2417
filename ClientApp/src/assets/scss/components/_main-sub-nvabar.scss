@@ -1,0 +1,12 @@
+.main-sub-nvabar {
+    display: flex;
+    background-color: var(--toolbar-bg);
+    // border: 1px solid $border-color;
+    border-radius: 5px;
+    overflow: hidden;
+    // box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+
+    &:empty {
+        display: none;
+    }
+}

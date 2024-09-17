@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Novel.IO.CodeGen.Api</id>
+    <version>1.0.0.0</version>
+    <title>Novel IO Code Generator</title>
+    <authors>Novel Apps</authors>
+    <owners>Novel App Solutions Pvt. Ltd.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Novel.IO.CodeGen.Api NuGet pkg</description>
+    <copyright>Copyright Novel App Solutions Pvt. Ltd.</copyright>
+  </metadata>
+  <files>
+    <file src="..\publish\Novel.IO.CodeGen.Api\Layout\**\*.yaml" target="" />
+	<file src="..\publish\Novel.IO.CodeGen.Api\Menu\*.yaml" target="" />
+  </files>
+</package>

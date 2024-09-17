@@ -1,0 +1,160 @@
+<div class="dynamic-layout-container">
+    <form [formGroup]="form">
+        <div class="row">
+            <ng-container *ngFor="let field of formFields">
+                <ng-container [ngSwitch]="field.dataType">
+
+                    <!-- Section -->
+                    <div *ngSwitchCase="'section'"
+                        class="col-md-{{(field.column && field.column >= 1 && field.column <= 12) ? field.column : 12}}">
+                        <div class="cards">
+                            <div class="card-title">
+                                <p *ngIf="field.showTitle !== 'false'" class="section-header tuncate-text"
+                                    #sectionHeading matTooltip={{field.label}}
+                                    [matTooltipDisabled]="isTooltipDisabled(sectionHeading)">
+                                    <i *ngIf="field.icon"
+                                        class="fas {{field.icon}} list-label-icon mr10"></i>{{field.label}}
+                                </p>
+                            </div>
+                            <div class="cards-content">
+                                <app-dynamic-layout [form]="form" [formFields]="field.fields"
+                                    [fieldOptions]="fieldOptions"></app-dynamic-layout>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ng-container *ngSwitchDefault>
+                        <!-- Inputs starts here -->
+                        <div [ngSwitch]="field.dataType.toLowerCase()"
+                            class="col-md-{{(field.column && field.column >= 1 && field.column <= 12) ? field.column : 12}}">
+                            <!-- Textbox -->
+                            <mat-form-field *ngSwitchDefault class="input-form-field input-flds field-pb-0"
+                                [ngClass]="field.required && !form.get(field.fieldName)?.valid ? 'required-field' : ''">
+                                <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                    <i class="fas {{field.icon}} list-label-icon mr10">
+                                    </i>
+                                </span>
+                                <input matInput [formControlName]="field.fieldName" [required]="field.required"
+                                    [id]="field.fieldName" placeholder="{{field.icon?field.label:''}}">
+                                <mat-error>{{field.label}} is required.</mat-error>
+                            </mat-form-field>
+
+                            <!-- Numeric -->
+                            <mat-form-field *ngSwitchCase="'numeric'" class="input-form-field input-flds field-pb-0"
+                                [ngClass]="field.required && !form.get(field.fieldName)?.valid ? 'required-field' : ''">
+                                <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                    <i class="fas {{field.icon}} list-label-icon mr10">
+                                    </i>
+                                </span>
+                                <input matInput type="number" [formControlName]="field.fieldName" [id]="field.fieldName"
+                                    onkeypress="return event.charCode >= 46 || (event.charCode >= 48 && event.charCode <= 57)"
+                                    [required]="field.required" placeholder="{{field.icon?field.label:''}}">
+                                <mat-error
+                                    *ngIf="form.get(field.fieldName)?.hasError('required') && form.get(field.fieldName)?.touched">{{field.label}}
+                                    is required.</mat-error>
+                                <mat-error *ngIf="form.get(field.fieldName)?.hasError('pattern')">
+                                    <ng-container *ngIf="field.scale > 0">
+                                        The value can only have up to {{field.scale}} decimal places.
+                                    </ng-container>
+                                    <ng-container *ngIf="!field.scale">
+                                        The value must be an integer.
+                                    </ng-container>
+                                </mat-error>
+                            </mat-form-field>
+
+                            <!-- Date -->
+                            <mat-form-field *ngSwitchCase="'datetime'" class="input-form-field input-flds field-pb-0"
+                                [ngClass]="field.required && form.get(field.fieldName)?.errors ? 'required-field' : ''">
+                                <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                    <i class="fas {{field.icon}} list-label-icon mr10">
+                                    </i>
+                                </span>
+                                <input matInput [formControlName]="field.fieldName" [matDatepicker]="picker"
+                                    [id]="field.fieldName" [required]="field.required"
+                                    placeholder="{{field.icon?field.label:'MM/DD/YYYY'}}">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                                <mat-error>{{field.label}} is required.</mat-error>
+                            </mat-form-field>
+
+                            <!-- Dropdown -->
+                            <!-- <mat-form-field *ngSwitchCase="'guid'" class="input-form-field input-flds field-pb-0">
+                                <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                    <i class="fas {{field.icon}} list-label-icon mr10"></i>
+                                </span>
+                                <mat-select [formControlName]="field.fieldName" [required]="field.required"
+                                    [id]="field.fieldName" placeholder="Select">
+                                    <mat-option [value]="null">Select</mat-option>
+                                    <mat-option *ngFor="let option of fieldOptions[field.fieldName]"
+                                        [value]="option.value">{{ option.text }}</mat-option>
+                                </mat-select>
+                                <mat-error>{{field.label}} is required.</mat-error>
+                            </mat-form-field> -->
+
+                            <!-- Dropdown -->
+                            <mat-form-field *ngSwitchCase="'guid'" class="input-form-field input-flds field-pb-0"
+                                [ngClass]="field.required && !form.get(field.fieldName)?.valid ? 'required-field' : ''">
+                                <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                    <i class="fas {{field.icon}} list-label-icon mr10">
+                                    </i>
+                                </span>
+                                <mat-select [formControlName]="field.fieldName" placeholder="Select"
+                                    [required]="field.required" [id]="field.fieldName">
+                                    <mat-option>
+                                        <ngx-mat-select-search [formControlName]="field.fieldName+'_search'"
+                                            placeholderLabel="Search"
+                                            noEntriesFoundLabel="No data found"></ngx-mat-select-search>
+                                    </mat-option>
+                                    <mat-option [value]="null">Select</mat-option>
+                                    <mat-option *ngFor="let option of fieldOptions[field.fieldName]"
+                                        [value]="option.value">
+                                        {{option.text}}
+                                    </mat-option>
+                                    <mat-option [value]="null" disabled
+                                        *ngIf="fieldOptions[field.fieldName].length === 0 && form.get(field.fieldName+'_search')?.value && !isDropDownLoading">No
+                                        data found</mat-option>
+                                </mat-select>
+                                <mat-error>{{field.label}} is required.</mat-error>
+                            </mat-form-field>
+
+                            <!-- Checkbox -->
+                            <div *ngSwitchCase="'boolean'" class="input-form-field mat-mdc-form-field">
+                                <div class="mdc-text-field">
+                                    <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                        <i class="fas {{field.icon}} list-label-icon mr10">
+                                            <span *ngIf="field.required" class="icon-required">*</span>
+                                        </i>
+                                    </span>
+                                    <mat-checkbox class="mat-check-box-field" [id]="field.fieldName"
+                                        [formControlName]="field.fieldName">
+                                        <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+
+                            <!-- Radio -->
+                            <div *ngSwitchCase="'radio'" class="form-group row-item-half">
+                                <mat-label *ngIf="!field.icon">{{field.label}}</mat-label>
+                                <span *ngIf="field.icon" matTextPrefix matTooltip={{field.label}}>
+                                    <i class="fas {{field.icon}} list-label-icon mr10"></i>
+                                </span>
+                                <mat-radio-group name="field.fieldName" [formControlName]="field.fieldName"
+                                    [attr.required]="field.required">
+                                    <mat-radio-button *ngFor="let option of fieldOptions[field.fieldName]"
+                                        [value]="option.value">{{ option.text }}</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                        <!-- Inputs ends here -->
+                    </ng-container>
+
+                </ng-container>
+            </ng-container>
+        </div>
+    </form>
+</div>

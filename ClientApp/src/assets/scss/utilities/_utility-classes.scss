@@ -1,0 +1,77 @@
+.flex-fit {
+    min-width: 0;
+    flex: 1 1 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.min-100 {
+    min-height: 100vh;
+}
+
+:root {
+    /* Background colors */
+    --main-bg: #fcfcfc;
+    --bg-secondary: #FFF;
+    --bg-color-3: #ffe2e5;
+    --bg-color-4: #f3f5f9;
+    --bg-color-5: #fafafa;
+    --bg-color-6: #f8f8f8;
+    --bg-color-7: #e9e9e9;
+    --scrollbar-thumb-bg: #ededed;
+    --toolbar-bg: #f3f5f9;
+    --toolbar-btn-hover-bg: #eaf0f9;
+    --item-hover-bg: #298df2a8;
+
+    /* Main colors */
+    --white: #fff;
+    --black: #000;
+    --primary-color: #3699ff;
+    --primary-hover-color: #095cb2;
+    --primary-link-color: #0b75e2;
+    --primary-color-darker: #0172C0;
+    --primary-color-light: #328CA8;
+    --primary-color-lighter: #93C5E8;
+
+    /* Text colors */
+    --primary-black: #212121;
+    --primary-gray: #b5b5c3;
+    --primary-error: #ff4743;
+    --primary-text-color: #717171;
+    --secondary-text-color: #7e8599;
+
+    --primary-header-color: #252f4a;
+    --primary-label-color: #78829d;
+
+    --extra-color-1: #ffa800;
+
+    --color-3: #303030;
+    --color-4: #485675;
+    --color-5: #80879a;
+    --color-6: #9EA3B3;
+    --color-7: #e0e0e8;
+
+    --icon-color: #8e8e8e;
+
+    /* Border colors */
+    --border-color: #ededed;
+    --border-color-light: #f1f2f3;
+    --border-color-dark: #e5eaee;
+    --border-color-darker: #e4e4e4;
+    --border-color-secondary: #d2d2d2;
+    --border-color-3: #c4c4c4;
+
+    --primary-border-color: #ededed;
+    --secondary-border-color: #ededed;
+
+    /* Other colors */
+    --highlight-color: #E24152;
+    --color-positive: #0bb783;
+    --color-warning: #DF7615;
+    --dark-green: #01a171;
+
+    --cz-body-bg: #fbfafa;
+    --cz-login-bg: #fd912f;
+}

@@ -1,0 +1,47 @@
+<div class="logout-box">
+    <div class="login-info">
+        <img src="assets/images/icons/man-user-color-icon.svg" alt="User Image" class="user-image">
+        <div class="login-details">
+            <h1 class="login-name" #name matTooltip={{user.name}} [matTooltipDisabled]="isTooltipDisabled(name)">
+                {{user.name}}</h1>
+            <p class="login-email font-body-medium color-font-secondary" #useremail matTooltip={{user.email}}
+                [matTooltipDisabled]="isTooltipDisabled(useremail)">{{user.email}}{{user.email}}</p>
+        </div>
+    </div>
+    <!-- <div class="separator"></div> -->
+    <!-- <button class="logout-btn">
+        <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="#8E8E8E" class="bi bi-sun-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+            </svg>
+        </span>
+        <span class="text">Theme</span>
+    </button>
+    <button class="logout-btn">
+        <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="#8E8E8E" class="bi bi-bell-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+            </svg>
+        </span>
+        <span class="text">Notification</span>
+    </button> -->
+    <button (click)="toggleTheme()" class="logout-btn p-2 my-0" title="Change theme"
+        style="border-bottom: 1px solid var(--primary-border-color);">
+        <span class="toggle-theme-btn"><i class="fas {{ isThemeChecked ? 'fa-moon' : 'fa-sun' }}"></i></span>
+        <span class="text">{{ themeService.activeTheme === 'light' ? 'Light' : 'Dark' }} Mode</span>
+    </button>
+    <button class="logout-btn" (click)="logout()">
+        <span class="icon">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.4727 7.5978L11.5664 13.504C11.0391 14.0314 10.125 13.6622 10.125 12.9064V9.53139H5.34375C4.87617 9.53139 4.5 9.15522 4.5 8.68764V5.31264C4.5 4.84506 4.87617 4.46889 5.34375 4.46889H10.125V1.09389C10.125 0.341544 11.0355 -0.0311127 11.5664 0.496231L17.4727 6.40248C17.7996 6.73295 17.7996 7.26733 17.4727 7.5978ZM6.75 13.3283V11.922C6.75 11.69 6.56016 11.5001 6.32812 11.5001H3.375C2.75273 11.5001 2.25 10.9974 2.25 10.3751V3.62514C2.25 3.00287 2.75273 2.50014 3.375 2.50014H6.32812C6.56016 2.50014 6.75 2.31029 6.75 2.07826V0.672012C6.75 0.439981 6.56016 0.250137 6.32812 0.250137H3.375C1.51172 0.250137 0 1.76186 0 3.62514V10.3751C0 12.2384 1.51172 13.7501 3.375 13.7501H6.32812C6.56016 13.7501 6.75 13.5603 6.75 13.3283Z"
+                    fill="#8E8E8E" />
+            </svg>
+        </span>
+        <span class="text">Logout</span>
+    </button>
+</div>

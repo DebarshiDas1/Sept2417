@@ -1,0 +1,95 @@
+.dark-theme {
+    /* Background colors */
+    --main-bg: #15171c; //
+    --bg-secondary: #0f1014; //
+    --bg-color-3: #ffe2e5;
+    --bg-color-4: #f3f5f9;
+    --bg-color-5: #fafafa;
+    --bg-color-6: #f8f8f8;
+    --bg-color-7: #e9e9e9;
+    --bg-color-8: #0f1014;
+    --scrollbar-thumb-bg: #676767; //
+    --toolbar-bg: #27282e; //
+    --toolbar-btn-hover-bg: #2d2d2d; //
+    --main-hover-bg: rgba(255, 255, 255, 0.05); //
+    --item-hover-bg: #51a7ff91; //
+    --sidebar-bg: #0d0e12; //
+    --sidebar-hover-bg: rgba(255, 255, 255, 0.1); //
+    --sidebar-submenu-hover-bg: rgba(255, 255, 255, 0.1); //
+    --list-page-bg: #0d0e12; //
+    --default-card-bg: #15171c; //
+    --secondary-card-bg: #1b1c22; //
+    --popup-bg: #15171c; //
+    --secondary-popup-bg: #0f1014; //
+    --default-popover-bg: #1c1d22; //
+
+    --list-bg-color-1: #e2415266; //
+    --list-bg-color-2: #ef632766; //
+    --list-bg-color-3: #8212665c; //
+    --list-bg-color-4: #0bb78366; //
+    --list-bg-color-5: #0172c066; //
+    --list-bg-color-6: #f4d80066; //
+    --list-bg-color-7: #301db742; //
+    --list-bg-color-8: #e30bcf40; //
+    --list-bg-color-9: #0ac2ee54; //
+
+    /* Main colors */
+    --white: #fff;
+    --black: #000;
+    --primary-color: #3699ff;
+    --primary-hover-color: #095cb2;
+    --primary-link-color: #3699ff; //
+    --primary-color-darker: #0172C0;
+    --primary-color-light: #328CA8;
+    --primary-color-lighter: #93C5E8;
+
+    /* Text colors */
+    --primary-black: #b5b7c8; //
+    --primary-gray: #b5b5c3;
+    --primary-error: #ff4743;
+    --primary-text-color: #717171;
+    --secondary-text-color: #7e8599;
+
+    --primary-header-color: #b5b7c8; //
+    --primary-label-color: #666b81; //
+    --sidebar-text-color: #808290; //
+    --sidebar-active-text-color: #b5b7c8; //
+
+    --extra-color-1: #ffa800;
+
+    --color-3: #c6c8df;
+    --color-4: #8d8e9a; //
+    --color-5: #80879a;
+    --color-6: #9EA3B3;
+    --color-7: #e0e0e8;
+
+    --icon-color: #8e8e8e;
+
+    /* Border colors */
+    --border-color: #ededed;
+    --border-color-light: #f1f2f3;
+    --border-color-dark: #1f212a;
+    --border-color-darker: #e4e4e4;
+    --border-color-secondary: #2e313b; //
+    --border-color-3: #c4c4c4;
+
+    --primary-border-color: #1e2027; //
+    --secondary-border-color: #27282f; //
+    --separator-color: #3f424c; //
+    --input-box-shadow: rgba(255, 255, 255, 0.14);
+    --sidebar-border-color: #1E2027;
+    --sidebar-submenu-border-color: #1E2027;
+
+    /* Other colors */
+    --highlight-color: #E24152;
+    --color-positive: #0bb783;
+    --color-warning: #DF7615;
+    --dark-green: #01a171;
+
+    --cz-body-bg: #fbfafa;
+    --cz-login-bg: #fd912f;
+    --box-shadow-1: rgba(255, 255, 255, 0) 0px 2px 4px, rgba(255, 255, 255, 0.1) 0px 2px 6px; //
+    --box-shadow-2: 0px 7px 24px rgba(255, 255, 255, 0.16); //
+    --box-shadow-3: 0px 3px 4px 0px rgba(255, 255, 255, 0.03); //
+    --selected-box-shadow: none; //
+}

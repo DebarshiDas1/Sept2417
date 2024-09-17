@@ -1,0 +1,52 @@
+@import "../../assets/scss/helpers/variables";
+@import "../../assets/scss/helpers/responsive";
+
+
+.list-unstyled,
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.card {
+  box-shadow: rgb(0, 0, 0, 0%) 0px 2px 4px, rgba(0, 0, 0, .1) 0px 2px 6px;
+  border: none;
+}
+
+
+.text-less-imp {
+  color: var(--primary-text-color);
+  font-size: 0.8rem;
+}
+
+.input-label {
+  font-size: 0.8rem;
+  color: var(--primary-text-color);
+  margin-bottom: 5px;
+}
+
+.auth-page-wrapper {
+  overflow: auto;
+  height: 100vh;
+  background-color: $bg-color-4;
+
+  .auth-card {
+    background-color: inherit;
+
+    img {
+      max-height: 500px;
+      float: right;
+      margin-right: 70px;
+      margin-top: 50px;
+    }
+  }
+
+  .login-card {
+    border-radius: 10px;
+
+    .card-body {
+      padding: 48px 13px;
+      margin: 48px 0px
+    }
+  }
+}

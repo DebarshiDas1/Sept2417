@@ -1,0 +1,41 @@
+<div class="side-navbar-sec">
+  <div class="logo-box">
+    <a [routerLink]="['/']"> <img src="assets/images/codeZen_Logo.svg" alt=""> </a>
+  </div>
+  <nav class="nav-link-box">
+    <ng-container *ngFor="let menu of menuData">
+      <a class="nav-link" [routerLink]="menu.route" routerLinkActive="active" *ngIf="!menu.items?.length">
+        <i class="nav-icon fas fa-xl {{menu.icon}}"></i>
+        <span class="nav-text">{{menu.name}}</span>
+      </a>
+      <div class="main-nav-link" (mouseenter)="showSubMenu($event)" *ngIf="menu.items?.length> 0">
+        <div class="nav-link" routerLinkActive="active">
+          <i class="nav-icon fas fa-xl {{menu.icon}}"></i>
+          <span class="nav-text" #menuName matTooltip={{menu.name}}
+            [matTooltipDisabled]="isTooltipDisabled(menuName)">{{menu.name}}</span>
+          <div class="sub-nav-link">
+            <div class="nav-link-item-wrapper">
+              <div class="nav-link-item" *ngFor="let subMenu of menu.items">
+                <a class="sub-nav-text" routerLinkActive="active" [routerLink]="subMenu.route"><i
+                    class="fas {{subMenu.icon}} mr10"></i>{{subMenu.name}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </nav>
+  <div class="side-bar-footer">
+    <button class="sed-user-pfl d-flex justify-content-center align-items-center" (click)="openLogoutDialog($event)">
+      <!-- <img src="assets/images/user-img.jpg" alt=""> -->
+      <!-- Doctor generic profile icon -->
+      <!-- <span class="material-icons user-icon">person</span> -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--sidebar-text-color)"
+        class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+        <path fill-rule="evenodd"
+          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+      </svg>
+    </button>
+  </div>
+</div>

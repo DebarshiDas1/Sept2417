@@ -1,0 +1,13 @@
+.main-section-column-wrapper {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .main-section-left {
+        width: 100%;
+    }
+
+    .main-section-right {
+        display: none;
+    }
+}
